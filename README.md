@@ -7,9 +7,8 @@ A modern travel recommendation application that helps users discover nearby plac
 - **Location-Based Discovery**: Automatically detects user's location to show nearby places
 - **Search Functionality**: Search for places by name, category, or location
 - **Interactive Map**: Visualize places with Leaflet map integration
-- **Category Filtering**: Browse places by different categories (restaurants, hotels, attractions, etc.)
+- **Category Filtering**: Browse places by different categories (restaurants, stadium, libraries)
 - **Responsive Design**: Works seamlessly across all device types
-- **Dark/Light Mode**: Automatic theme switching based on system preferences
 - **Real-time Updates**: Dynamic content updates based on user interactions
 - **Error Handling**: Comprehensive error handling with user-friendly messages
 
@@ -22,7 +21,7 @@ A modern travel recommendation application that helps users discover nearby plac
 - **Tailwind CSS**: Utility-first CSS framework
 - **shadcn/ui**: Pre-built accessible UI components
 - **Leaflet & React-Leaflet**: Interactive map functionality
-- **Lucide Icons**: Beautiful, accessible icons
+
 
 
 ### Backend
