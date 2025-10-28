@@ -100,7 +100,7 @@ function App() {
       try {
         setIsLoading(true);
         const res = await fetch(
-          `http://localhost:5000/api/places?latne=${
+          `https://travel-advisor-backend-g3xa.onrender.com/api/places?latne=${
             bounds?.northEast.latitude || 12.838442
           }&lngne=${bounds?.northEast.longitude || 109.149359}&latsw=${
             bounds?.southWest.latitude || 11.847676

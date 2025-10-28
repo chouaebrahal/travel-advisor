@@ -21,7 +21,7 @@ const PlaceCard = ({randomImage,place,setItemRef}:PlaceCardPropsType) => {
      <Card
         ref={setItemRef}
         
-        className="p-0 mb-5 gap-0 w-full md:w-[48%] lg:w-full bg-zinc-900 text-white"
+        className="p-0 mb-5 gap-0 w-full md:w-[48%] xl:w-full bg-zinc-900 text-white"
       >
         <CardHeader className="p-0 m-0 overflow-hidden rounded-t-2xl">
           <img

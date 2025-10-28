@@ -92,7 +92,7 @@ const List = ({
           </SelectContent>
         </Select>
       </div>
-      <div className={`flex flex-wrap gap-8 scroll-smooth px-2 lg:block w-full h-full pb-4`}>
+      <div className={`flex flex-wrap gap-8 scroll-smooth px-2  w-full h-full pb-4`}>
         {isLoading ? (
           <SpinnerComponent />
         ) : placesElements?.length ? (
