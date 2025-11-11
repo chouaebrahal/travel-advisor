@@ -3,6 +3,7 @@ import Header from "./components/elements/Header";
 import List from "./components/elements/List";
 import Map from "./components/elements/Map";
 import type { FoursquarePlace, FoursquareResponse } from "./lib/types";
+import { useDebounced } from "./lib/utils";
 type Bounds = {
   northEast: {
     latitude: number;
@@ -29,6 +30,7 @@ function App() {
     northEast: { latitude: 12.838442, longitude: 109.149359 },
     southWest: { latitude: 11.847676, longitude: 109.095887 },
   });
+  const debouncedSearchTerm = useDebounced(searchTerm,500)
   useEffect(() => {
     // Check if geolocation is supported
     if (!navigator.geolocation) {
@@ -62,7 +64,7 @@ function App() {
   useEffect(() => {
     async function getPlace() {
       try {
-        if (searchTerm.length > 3) {
+        if (searchTerm.length > 2) {
           const res = await fetch(
             `https://api.allorigins.win/raw?url=${encodeURIComponent(
               `https://nominatim.openstreetmap.org/search?q=${searchTerm}&format=json&limit=1`
@@ -87,11 +89,11 @@ function App() {
         }
       } catch (err) {
         setSearchError("Failed to find places. Please try again.");
-        console.log("Places fetch error", err);
+       
       }
     }
     getPlace();
-  }, [searchTerm]);
+  }, [debouncedSearchTerm]);
 
   console.log(bounds);
   const places: FoursquarePlace[] | undefined = placesResponse?.results;

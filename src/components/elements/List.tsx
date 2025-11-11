@@ -71,7 +71,7 @@ const List = ({
 },[places,selectedValue])
 
   return (
-    <aside className="bg-black col-start-1 col-span-12 row-start-7 row-span-6 xl:col-start-1 xl:col-span-3  xl:row-start-1 xl:row-end-13    p-4 md:p-6  lg:h-full scroll-smooth overflow-x-scroll lg:overflow-x-hidden overflow-y-scroll lg:overflow-y-scroll ">
+    <aside className="bg-black col-start-1 col-span-12 row-start-7 row-span-6 xl:col-start-1 xl:col-span-3  xl:row-start-1 xl:row-end-13    p-4 md:p-5  lg:h-full scroll-smooth overflow-x-scroll lg:overflow-x-hidden overflow-y-scroll lg:overflow-y-scroll ">
       <div className="w-full h-fit pb-4">
         <Select
           defaultValue="4d4b7105d754a06374d81259"

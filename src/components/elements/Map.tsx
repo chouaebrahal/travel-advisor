@@ -1,4 +1,5 @@
 import type { FoursquarePlace } from "@/lib/types";
+import { safeDataValue } from "@/utils/dataUtils";
 import { useEffect, useMemo } from "react";
 import {
   MapContainer,
@@ -99,7 +100,7 @@ const Map = ({ places, bounds, setBounds, setMarkerClick }: MapPropsType) => {
               position={[place.latitude, place.longitude]}
             >
               <Popup>
-                <h3 className="text-xl">{place.name}</h3> <br /> <p className="text-blue-500">{place.distance} m</p>
+                <h3 className="text-xl">{safeDataValue(place.name, 'NAME')}</h3> <br /> <p className="text-blue-500">{safeDataValue(place.distance, 'DISTANCE')}</p>
               </Popup>
             </Marker>
           );
